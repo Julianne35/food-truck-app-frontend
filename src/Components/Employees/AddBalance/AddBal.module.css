@@ -1,0 +1,158 @@
+.h2 {
+  font-size: 1rem;
+}
+
+.h3,
+.h3-cur-bal {
+  font-weight: 350;
+  font-size: 1.5rem;
+}
+
+.current-bal,
+.late-bal {
+  width: 4rem;
+  border-radius: .5rem;
+  color: whitesmoke;
+  margin-left: .3rem;
+}
+.current-bal {
+  background-color: teal;
+}
+
+.late-bal {
+  background-color: rgb(184, 6, 6);
+}
+
+.h3-cur-bal{
+  display: flex; 
+  justify-content: center;
+}
+
+b {
+  font-weight: 500;
+}
+
+hr {
+  background-color: teal;
+  padding: 0.1rem;
+  margin: 0;
+}
+
+.bal-col,
+.bal-col-2,
+.bal-col-3 {
+  background-color: #e3f4f4;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.bal-col {
+  border-bottom: 5px teal solid;
+  margin-bottom: 1rem;
+}
+
+.bal-col-2 {
+  background-color: #cddfdf;
+}
+
+.bal-col-3 {
+  margin: 1.2rem 0 0.8rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-card {
+  margin-bottom: 1rem;
+  padding-top: 0.3rem;
+  background-color: teal;
+  color: whitesmoke;
+}
+
+.container-total-btn {
+  background-color: #1f4f83 !important;
+  width: 20rem;
+  margin-top: 0.5rem;
+}
+
+.container-exit-btn {
+  background-color: teal !important;
+  width: 20rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.container-exit-btn:hover {
+  background-color: rgb(1, 102, 102) !important;
+}
+
+.input,
+.input-checked,
+.input-disabled,
+.input-textarea,
+.date {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.input-checked {
+ width: 5.5rem;
+}
+
+.date {
+  background-color: teal !important;
+  color: whitesmoke;
+}
+
+.input-disabled {
+  color: rgb(204, 204, 204);
+}
+
+.input-textarea {
+  height: 5.5rem;
+}
+
+.add-label {
+  width: 17rem;
+  margin: .2rem;
+}
+
+.sub-bal {
+  margin: .2rem;
+}
+
+.add-bal {
+  margin: .2rem;
+}
+
+.add-to-bal-col {
+  background-color: #b3b3b38e;
+  border-radius: .3rem;
+  display: flex;
+  align-items:center;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  .btn:not(:disabled):not(.disabled) {
+    background-color: teal !important;
+  }
+
+  .current-bal,
+  .late-bal {
+    margin-left: .3rem;
+    width: 5rem;
+  }
+
+}

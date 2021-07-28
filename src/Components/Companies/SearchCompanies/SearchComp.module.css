@@ -1,0 +1,47 @@
+.comp-address-col,
+.comp-result-address-col,
+.comp-phone-col,
+.comp-result-phone-col {
+    border-bottom: 1px #8c9c9c solid;
+    padding-top: .5rem;
+}
+
+.comp-address-col,
+.comp-phone-col {
+    border-top-left-radius: .4rem;
+    border-bottom-left-radius: .4rem;
+    margin-top: .1rem;
+}
+
+.comp-address-col,
+.comp-phone-col {
+    background-color: #dae9e9;
+}
+
+.comp-result-address-col,
+.comp-result-phone-col {
+    border-top-right-radius: .4rem;
+    border-bottom-right-radius: .4rem;
+    margin-top: .1rem;
+}
+
+.comp-result-address-col,
+.comp-result-phone-col {
+    background-color: #e3f4f4;
+}
+
+h5 {
+    font-size: 1.4rem;
+    font-weight: 450;
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .add-info {
+       text-align: left;
+    }
+
+    .add-info-title {
+       text-align: right;
+    }
+  }

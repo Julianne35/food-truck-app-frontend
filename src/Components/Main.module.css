@@ -1,0 +1,52 @@
+.main-btn,
+.main-card-btn{
+  padding: 2rem !important;
+  width: 50rem !important;
+  margin-top: 1rem !important;
+  background-color: #1f4f83 !important;
+  color: #f8f9fa !important;
+}
+
+.main-btn-2,
+.main-card-btn-2{
+  padding: 2rem !important;
+  width: 50rem !important;
+  margin-top: 1rem !important;
+  background-color: teal !important;
+  color: #f8f9fa !important;
+}
+
+.viewsnaphot-btn,
+.search-btn {
+  width: 15rem !important;
+}
+
+.search-btn {
+  background-color: #1f4f83 !important;
+}
+
+.main-btn:hover,
+.search-btn:hover {
+  background-color: #10355a !important;
+  text-decoration-line: underline !important;
+}
+
+.main-btn-2:hover {
+  background-color: #015252 !important;
+  text-decoration-line: underline !important;
+}
+
+.main-login-btn--wrap {
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    margin-top: 3rem !important;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .main-login-btn--wrap {
+        margin-top: .2rem !important;
+    }
+  }
+

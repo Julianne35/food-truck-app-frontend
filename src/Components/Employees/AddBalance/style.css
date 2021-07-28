@@ -1,0 +1,100 @@
+input[type="text"] {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.react-datepicker__header.react-datepicker__header--has-time-select,
+.react-datepicker__header.react-datepicker__header--time {
+  background-color: #1f4f83 !important;
+  color: whitesmoke;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header {
+  color: whitesmoke;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__time-name {
+  color: whitesmoke;
+}
+
+.react-datepicker__header.react-datepicker__header--time {
+  height: 5rem;
+}
+
+.react-datepicker__portal .react-datepicker__day-name, 
+.react-datepicker__portal .react-datepicker__day, 
+.react-datepicker__portal .react-datepicker__time-name {
+  width: 1.5rem;
+  line-height: 2rem;
+}
+
+span.input-group-text {
+  background-color: #1f4f8300 !important;
+  border: none;
+}
+
+input[type="checkbox"] {
+  transform: scale(2);
+}
+
+.input-group {
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  flex-flow: row-reverse;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  button#dropdown-basic-button,
+  dropdown-menu.show {
+    background-color: #1f4f83 !important;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    margin-left: 0.9rem;
+    width: 95%;
+  }
+
+  button.react-datepicker__close-icon {
+    margin-right: 1.3rem;
+  }
+
+  .react-datepicker__header.react-datepicker__header--time {
+    height: 5rem;
+  }
+
+  .react-datepicker__portal 
+  .react-datepicker__day-name, 
+  .react-datepicker__portal 
+  .react-datepicker__day, 
+  .react-datepicker__portal 
+  .react-datepicker__time-name {
+    width: 2rem;
+  }
+
+  /* input[type="checkbox"] {
+    
+  } */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 1024px) {
+  input[type="text"] {
+    width: 96.8%;
+  }
+}

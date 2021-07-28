@@ -1,0 +1,14 @@
+.continue-btn,
+.back-btn {
+    background-color: #1f4f83 !important;
+}
+
+.back-btn {
+    width: 10rem;
+}
+
+.continue-btn:hover,
+.back-btn:hover {
+    background-color: #163b63 !important;
+    text-decoration: underline;
+}
