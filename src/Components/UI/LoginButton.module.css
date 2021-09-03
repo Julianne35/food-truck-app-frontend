@@ -1,0 +1,18 @@
+.header--btn {
+  background-color: white !important;
+  border: .1rem #10355a solid !important;
+  width: 5rem !important;
+  margin-bottom: 1rem !important;
+  color: #10355a !important;
+}
+
+.header--btn:hover {
+  background-color: #10355a !important;
+  color: #f8f9fa !important;
+}
+
+.login-btn-wrapper {
+  display: flex !important;
+  width: 100% !important;
+  justify-content: flex-start !important;
+}

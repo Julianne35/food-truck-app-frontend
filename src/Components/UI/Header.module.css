@@ -1,0 +1,21 @@
+.header-navbar {
+  background-color: teal !important;
+}
+
+.nav--wraper {
+  background-color: wheat !important;
+}
+
+.header-wrap {
+  width: 37rem !important;
+}
+
+.header--link {
+  color: #f8f9fa !important;
+}
+
+.header--link:hover {
+  color: #cbd3da ;
+  cursor: pointer;
+  text-decoration-line: underline !important;
+}
