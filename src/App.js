@@ -11,13 +11,13 @@ import CompDetailsContainer from "./Components/Companies/SearchCompanies/CompDet
 import AddEmpBalance from "./Components/Employees/AddBalance/AddEmpBalance";
 import Success from "./Components/Employees/AddBalance/Success";
 import List from "./Components/Companies/FullList/List";
+import ListResults from "./Components/Companies/FullList/ListResults";
 import Cont from "./Components/TestThree/Cont";
 
 import {CompLiProvider} from "./Components/TestThree/CompLiContext";
 
 function App() {
   return (
-    <>
     <CompLiProvider>
       <CompInfoProvider>
         <CompListProvider>
@@ -25,6 +25,7 @@ function App() {
             <Switch>
               <Route exact path="/test" component={Cont} />
 
+              <Route exact path="/resultslist/:companyId" component={ListResults} />
               <Route exact path="/list" component={List} />
               <Route exact path="/success/:companyId/:employeeId" component={Success} />
               <Route exact path="/addbalance/:employee/:balance/:companyId/:employeeId" component={AddEmpBalance} />
@@ -45,7 +46,6 @@ function App() {
         </CompListProvider>
       </CompInfoProvider>
      </CompLiProvider>
-    </>
   );
 }
 
