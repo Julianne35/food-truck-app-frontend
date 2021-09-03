@@ -23,6 +23,7 @@ const ListResults = () => {
     <>
       <Wrapper>
         <p>COMPANY NAME: {company} </p> 
+        {/* test */}
         <p>ADDRESS: {address}</p>
       </Wrapper>
     </>
