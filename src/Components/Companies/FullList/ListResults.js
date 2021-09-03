@@ -22,8 +22,7 @@ const ListResults = () => {
   return (
     <>
       <Wrapper>
-        <p>COMPANY NAME: {company} </p> 
-        {/* test comment to show*/}
+        <p>COMPANY: {company} </p> 
         <p>ADDRESS: {address}</p>
       </Wrapper>
     </>
