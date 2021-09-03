@@ -4,17 +4,15 @@ import axios from "axios";
 export const CompLiContext = createContext();
 
 export const CompLiProvider = (props) => {
-  // const [id, setId] = useState("");
   const [getValueFromBtn] = useState("");
 
   const [company, setCompany] = useState([]);
-  // const [details, setDetails] = useState([]);
 
   useEffect(() => {
     axios
       .get(`http://localhost:5000/get-snapshot-test/${getValueFromBtn}`)
       .then((res) => {
-        console.log("test",res.data);
+        // console.log("test",res.data);
         setCompany(res.data);
       })
       .catch((err) => {

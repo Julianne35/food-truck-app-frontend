@@ -25,50 +25,44 @@ const EmpDetails = ({ filtered }) => {
       <Container className="pl-1 pr-1 mt-4">
         {onShowTitle && <h3>Employee Actions</h3>}
 
-        {filtered.map((result, id) => (
+        {filtered.map((result, id) =>
           result.details.map((inner) => (
-          <>
-          {/* for seach credit by customers - shows the results */}
-            {!onShowTitle && (
-              <Row style={{ margin: "0.1rem" }}>
-                <Col sm={12} className={style["emp-mobile-col"]}>
-                  <h4 key={inner.id}>{inner.employee}:</h4>
-                </Col>
-              </Row>
-            )}
-
-            {onShowTitle && (
-              <>
+            <>
+              {/* for seach credit by customers - shows the results */}
+              {!onShowTitle && (
                 <Row style={{ margin: "0.1rem" }}>
                   <Col sm={12} className={style["emp-mobile-col"]}>
-                    <h5
-                      key={inner.id}
-                      className={style["h5-employee"]}
-                    >
-                      {inner.employee}:
-                    </h5>
-                    <Link
-                      to={{
-                        pathname:`/addbalance/` +
-                        inner.employee + `/` +
-                        inner.balance + `/` + 
-                        result._id + `/` +
-                        inner._id 
-                      }}
-                      className={style["bal-btn"]}
-                    >
-                      <h5>Update Balance</h5>
-                    </Link>
-                    <Link to="#" className={style["view-btn"]}>
-                      <h5>View Account</h5>
-                    </Link>
+                    <h4 key={inner.id}>{inner.employee}</h4>
                   </Col>
                 </Row>
-              </>
-            )}
-            <hr style={{ margin: ".5rem", backgroundColor: "white" }} />
-          </>
-        ))))}
+              )}
+
+              {onShowTitle && (
+                <>
+                  <Row style={{ margin: "0.1rem" }}>
+                    <Col sm={12} className={style["emp-mobile-col"]}>
+                      <h5 key={inner.id} className={style["h5-employee"]}>
+                        {inner.employee}:
+                      </h5>
+                      <Link
+                        to={{
+                          pathname: `/addbalance/${inner.employee}/${inner.balance}/${result._id}/${inner._id}`,
+                        }}
+                        className={style["bal-btn"]}
+                      >
+                        <h5>Update Balance</h5>
+                      </Link>
+                      <Link to="#" className={style["view-btn"]}>
+                        <h5>View Account</h5>
+                      </Link>
+                    </Col>
+                  </Row>
+                </>
+              )}
+              <hr style={{ margin: ".5rem", backgroundColor: "white" }} />
+            </>
+          ))
+        )}
 
         <Row>
           <Col>

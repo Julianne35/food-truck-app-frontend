@@ -13,9 +13,10 @@ export const CompListProvider = (props) => {
      axios
       .get(`http://localhost:5000/get-snapshot-test/${getValueFromBtn}`)
       .then((res) => {
-        console.log("Company:", res.data);
+        // console.log("Company:", res.data);
         setCompany(res.data);
-        setBalance(res.data.balance.toFixed(2));
+        setBalance(res.data.balance);
+        // setEmployee(res.data.employee)
       })
       .catch((err) => {
         console.log(err);

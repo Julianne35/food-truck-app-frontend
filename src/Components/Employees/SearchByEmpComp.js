@@ -27,9 +27,27 @@ const SearchByEmpComp = () => {
     return res.company.toLowerCase().includes(searchField.toLowerCase());
   });
 
-  const test = company.filter((res) => {
-    return res.employee.toLowerCase().includes(searchField.toLowerCase());
+  const test = company.map((element) => {
+    return {
+      ...element,
+      details: element.details.filter((details) =>
+        details.employee.toLowerCase().includes(searchField.toLowerCase())
+      ),
+    };
   });
+  
+
+  // const test = company
+  // .map((company) => {
+  //   let details = company.details.filter((detail) =>
+  //     detail.employee.toLowerCase().includes(searchField.toLowerCase())
+  //   );
+  //   if (!details.length) {
+  //     return null;
+  //   }
+  //   return { ...company, details };
+  // })
+  // .filter(Boolean);
 
   const inputRef = useRef(null); // 1. Create the ref
 

@@ -5,13 +5,13 @@ import Container from "react-bootstrap/Container";
 
 import style from "./SearchComp.module.css";
 
-const CompInfoDetails = ({ add }) => {
+const CompInfoDetails = ({ filtered }) => {
   return (
     <>
       <Container className="pl-1 pr-1 mt-4">
         <h3>General Information</h3>
 
-        {add.map((result, id) => (
+        {filtered.map((result, id) => (
           <>
             <Row style={{ margin: "0.1rem" }}>
               <Col sm={4} className={style["comp-address-col"]}>
