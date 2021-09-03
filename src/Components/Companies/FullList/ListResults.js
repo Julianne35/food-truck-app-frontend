@@ -18,7 +18,7 @@ const ListResults = () => {
         setCompany(res.data.data.company);
         setAddress(res.data.data.address);
       });
-  },[setCompany]);
+  },[setCompany, companyId]);
   return (
     <>
       <Wrapper>
