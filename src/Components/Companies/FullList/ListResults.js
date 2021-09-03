@@ -22,7 +22,7 @@ const ListResults = () => {
   return (
     <>
       <Wrapper>
-        <p>COMPANY: {company} </p> 
+        <p>COMPANY NAME: {company} </p> 
         <p>ADDRESS: {address}</p>
       </Wrapper>
     </>
