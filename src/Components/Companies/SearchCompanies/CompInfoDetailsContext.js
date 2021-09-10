@@ -11,7 +11,7 @@ export const CompInfoProvider = (props) => {
       axios
       .get(`http://localhost:5000/get-info/${getCompValueFromBtn}`)
       .then((res) => {
-        console.log("address:", res.data);
+        // console.log("address:", res.data);
         setAddress(res.data);
       })
       .catch((err) => {
