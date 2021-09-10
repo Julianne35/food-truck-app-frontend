@@ -2,7 +2,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import FormControl from "react-bootstrap/FormControl";
-import CompInfoDetails from "./CompInfoDetails";
+// import CompInfoDetails from "./CompInfoDetails";
 
 const GeneralInfo = ({address, phone}) => {
     return(<>
