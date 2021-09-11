@@ -40,7 +40,8 @@ hr {
 
 .bal-col,
 .bal-col-2,
-.bal-col-3 {
+.bal-col-3,
+.bal-col-3a{
   background-color: #e3f4f4;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -61,6 +62,13 @@ hr {
   align-items: center;
   flex-direction: column;
 }
+
+.bal-col-3a {
+  margin: 1.2rem 0 0.8rem 0;
+  background-color: #fff;
+  border: .1rem #85a9ce dashed;
+}
+
 
 .title-card {
   margin-bottom: 1rem;
@@ -110,7 +118,7 @@ hr {
 }
 
 .date {
-  background-color: teal !important;
+  background-color: #6665658e !important;
   color: whitesmoke;
 }
 
@@ -140,6 +148,11 @@ hr {
   border-radius: .3rem;
   display: flex;
   align-items:center;
+}
+
+.newBal {
+  color: #1f4f83; 
+  font-weight: bold;
 }
 
 /* Medium devices (tablets, 768px and up) */

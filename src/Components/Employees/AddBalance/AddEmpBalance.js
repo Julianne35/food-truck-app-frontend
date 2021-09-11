@@ -28,13 +28,14 @@ const AddEmpBalance = () => {
                 <h3 className={style.h3}><b>Employee:</b> {employee}</h3>
                 <h3 className={style["h3-cur-bal"]}><b>Current Balance:</b> 
                      <div className=
+                     // eslint-disable-next-line no-whitespace-before-property
                      {style [balance == 0 ? 'current-bal' : 'late-bal']}>
                         ${balance} {/*{check()} */}
                      </div> 
                 </h3>
               </Col>
               <Col className={style["bal-col-2"]}>
-               <AddForm />
+               <AddForm employee={employee}/>
               </Col>
           </div>
          </Card>

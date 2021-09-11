@@ -12,7 +12,7 @@ import style from "./AddBal.module.css";
 import "react-datepicker/dist/react-datepicker.css";
 import "./style.css";
 
-const AddForm = () => {
+const AddForm = ({ employee }) => {
   const [date] = useState(new Date().toLocaleString());
   const [newBalance, setNewBalance] = useState("");
   const [notes, setNotes] = useState("");
@@ -78,7 +78,7 @@ const AddForm = () => {
         date: date,
       },
     }).then((res) => {
-      history.push(`/success/${companyId}/${employeeId}` );
+      history.push(`/success/${companyId}/${employeeId}`);
       console.log(res.data);
     });
   };
@@ -107,7 +107,7 @@ const AddForm = () => {
       <Col className="mt-4" sm={12}>
         <Input
           inputClassName={style["input"]}
-          inputPlaceHolder={"Enter Updated Amount "}
+          inputPlaceHolder={"Enter New Amount "}
           setInputValue={setNewBalance}
           inputValue={newBalance}
           inputName={"newBalance"}
@@ -159,16 +159,16 @@ const AddForm = () => {
       </div>
 
       {/*  TOTAL ------------------------------- */}
+      {state.taxIsChecked || state.feeIsChecked ? (
+        <Col className={style["bal-col-3a"]}>
+          {state.taxIsChecked ? "Tax selected" : null} 
+          {state.taxIsChecked && state.feeIsChecked ? 
+            <div>-----------------------</div> : null} 
+          {state.feeIsChecked ? "Fee selected" : null}
+        </Col>
+      ) : null}
+
       <Col className={style["bal-col-3"]}>
-        <Input
-          inputClassName={style["input"]}
-          inputPlaceHolder={"$0.00"}
-          setInputValue={setTotal}
-          inputValue={total}
-          inputName={"total"}
-          inputType={"number"}
-          inputStep={"0.01"}
-        />
         <Button
           onClick={() => {
             updateBal();
@@ -180,11 +180,22 @@ const AddForm = () => {
         >
           Update
         </Button>
-        <div>{state.taxIsChecked ? "Tax is added to balance" : null}</div>
-        <div>{state.feeIsChecked ? "Late Fee is added to balance" : null}</div>
+
+        {/* <Input
+          inputClassName={style["input"]}
+          inputPlaceHolder={"$0.00"}
+          setInputValue={setTotal}
+          inputValue={total}
+          inputName={"total"}
+          inputType={"number"}
+          inputStep={"0.01"}
+        /> */}
       </Col>
 
       <Col>
+        <h3 className={style["newBal"]}>
+          {total ? `${employee}'s new balance is $${total}` : null}
+        </h3>
         <TextArea
           inputClassName={style["input-textarea"]}
           inputInline={{ margin: "3rem 0 2rem 0" }}
