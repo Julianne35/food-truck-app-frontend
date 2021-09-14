@@ -24,6 +24,7 @@ const AddForm = ({ employee }) => {
   const [state, setState] = useState({
     taxIsChecked: false,
     feeIsChecked: false,
+    closeIsChecked: false
   });
 
   // takes care of zero being striped
@@ -66,6 +67,13 @@ const AddForm = ({ employee }) => {
       setTotal(toEnUSLocale(calAddedFeeAndTax));
     }
   };
+
+  //remove fee options
+  const removeFee = () => {
+    if (state.feeIsChecked ) {
+      setState(false)
+    }
+  } 
 
   const addBalHandler = (e) => {
     e.preventDefault();
@@ -131,28 +139,42 @@ const AddForm = ({ employee }) => {
               />
             </InputGroup>
           </Col>
-          <Col sm={1}></Col>
+          <Col className={style["sm-col"]} sm={1}></Col>
           <Col className={style["add-to-bal-col"]} sm={5}>
-            <InputGroup>
-              <Form.Label className={style["sub-bal"]}>Late Fee</Form.Label>
-              <InputGroup.Checkbox
-                type="checkbox"
-                name="feeIsChecked"
-                checked={state.feeIsChecked}
-                onChange={handleChange}
-                aria-label="Checkbox for following text input"
-              />
-            </InputGroup>
-            {state.feeIsChecked && (
-              <Input
-                inputClassName={style["input-checked"]}
-                inputPlaceHolder={"$0.00"}
-                setInputValue={setFee}
-                inputValue={fee}
-                inputName={"fee"}
-                inputType={"number"}
-                inputStep={"0.01"}
-              />
+            {state.feeIsChecked ? (
+              <Col className={style["bal-fees"]}>
+                <Button className={style["fee-btn"]} 
+                onClick={() => {setFee("0.50")}}>.50</Button>
+                <Button className={style["fee-btn"]} 
+                onClick={() => {setFee("1.00")}}>$1</Button>
+                <Button className={style["fee-btn"]} 
+                onClick={() => {setFee("1.50")}}>$1.50</Button>
+                <Button className={style["fee-btn"]} 
+                onClick={() => {setFee("2.00")}}>$2</Button>
+                <Input
+                  inputClassName={style["input-checked"]}
+                  inputPlaceHolder={"$0.00"}
+                  setInputValue={setFee}
+                  inputValue={fee}
+                  inputName={"fee"}
+                  inputType={"number"}
+                  inputStep={"0.01"}
+                />
+                <Button className={style["fee-btn-remove"]} 
+                onClick={() => {removeFee()}}>X</Button>
+              </Col>
+            ) : null}
+            {state.feeIsChecked ? null : (
+              <InputGroup className="pt-2 pb-2">
+                <Form.Label className={style["sub-bal"]}>Late Fee Options</Form.Label>
+                <InputGroup.Checkbox
+                  type="checkbox"
+                  name="feeIsChecked"
+                  checked={state.feeIsChecked}
+                  onChange={handleChange}
+                  aria-label="Checkbox for following text input"
+                />
+              </InputGroup>
             )}
           </Col>
         </div>
@@ -161,9 +183,10 @@ const AddForm = ({ employee }) => {
       {/*  TOTAL ------------------------------- */}
       {state.taxIsChecked || state.feeIsChecked ? (
         <Col className={style["bal-col-3a"]}>
-          {state.taxIsChecked ? "Tax selected" : null} 
-          {state.taxIsChecked && state.feeIsChecked ? 
-            <div>-----------------------</div> : null} 
+          {state.taxIsChecked ? "Tax selected" : null}
+          {state.taxIsChecked && state.feeIsChecked ? (
+            <div>-----------------------</div>
+          ) : null}
           {state.feeIsChecked ? "Fee selected" : null}
         </Col>
       ) : null}

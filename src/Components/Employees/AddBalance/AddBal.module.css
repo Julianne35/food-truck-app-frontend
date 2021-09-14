@@ -11,9 +11,9 @@
 .current-bal,
 .late-bal {
   width: 4rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: whitesmoke;
-  margin-left: .3rem;
+  margin-left: 0.3rem;
 }
 .current-bal {
   background-color: teal;
@@ -23,8 +23,8 @@
   background-color: rgb(184, 6, 6);
 }
 
-.h3-cur-bal{
-  display: flex; 
+.h3-cur-bal {
+  display: flex;
   justify-content: center;
 }
 
@@ -38,10 +38,14 @@ hr {
   margin: 0;
 }
 
+.sm-col{
+  display: none;
+}
+
 .bal-col,
 .bal-col-2,
 .bal-col-3,
-.bal-col-3a{
+.bal-col-3a {
   background-color: #e3f4f4;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -66,9 +70,31 @@ hr {
 .bal-col-3a {
   margin: 1.2rem 0 0.8rem 0;
   background-color: #fff;
-  border: .1rem #85a9ce dashed;
+  border: 0.1rem #85a9ce dashed;
 }
 
+.bal-fees {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -4rem;
+}
+
+.fee-btn,
+.fee-btn-remove {
+  margin-bottom: 1px;
+  padding: 0 0.6rem;
+  background-color: #b80606;
+  border: none;
+  width: 10rem;
+}
+
+.fee-btn:hover {
+  background-color: #740707;
+}
+
+.fee-btn-remove {
+  background-color: #666565;
+}
 
 .title-card {
   margin-bottom: 1rem;
@@ -79,7 +105,7 @@ hr {
 
 .container-total-btn {
   background-color: #1f4f83 !important;
-  width: 20rem;
+  width: 15rem;
   margin-top: 0.5rem;
 }
 
@@ -113,9 +139,6 @@ hr {
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.input-checked {
- width: 5.5rem;
-}
 
 .date {
   background-color: #6665658e !important;
@@ -132,40 +155,73 @@ hr {
 
 .add-label {
   width: 17rem;
-  margin: .2rem;
+  margin: 0.2rem;
 }
 
-.sub-bal {
-  margin: .2rem;
-}
-
+.sub-bal ,
 .add-bal {
-  margin: .2rem;
+  margin: 0.2rem;
+  font-size: small;
+  line-height: 1rem;
 }
 
 .add-to-bal-col {
   background-color: #b3b3b38e;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   display: flex;
-  align-items:center;
+  align-items: center;
+  justify-content: flex-end;
+  width: 7.5rem;
+  margin-right: 1px;
 }
 
 .newBal {
-  color: #1f4f83; 
+  color: #1f4f83;
   font-weight: bold;
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
   .btn:not(:disabled):not(.disabled) {
     background-color: teal !important;
   }
 
   .current-bal,
   .late-bal {
-    margin-left: .3rem;
+    margin-left: 0.3rem;
     width: 5rem;
   }
+
+  .bal-fees {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+.fee-btn,
+.fee-btn-remove {
+  margin-right: 1px;
+  padding: 0 0.6rem;
+}
+
+.add-to-bal-col {
+  justify-content: flex-start;
+}
+
+.sub-bal ,
+.add-bal {
+  font-size: 1rem;
+}
+
+.input-checked {
+  width: 5.5rem;
+}
+
+.sm-col{
+  display: block;
+}
+
+.container-total-btn {
+  width: 20rem;
+}
 
 }
