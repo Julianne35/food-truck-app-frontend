@@ -2,11 +2,13 @@ import Button from 'react-bootstrap/Button';
 import style from "./Success.module.css";
 
 const SuccessDetails = ({employee, balance, notes, company, employeeId, _id}) => {
-
+  //map tp find obj id
   const id = _id.map((i) => i)
   console.log("id",id)
+  //match http obj id with maped array
   const found = id.find(el => el === employeeId)
   console.log("found", found)
+  //find index of mapped obj id
   const i = id.findIndex(i => i === found);
   console.log("index", i)
 
