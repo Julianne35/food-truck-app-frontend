@@ -4,52 +4,51 @@ import axios from "axios";
 import Wrapper from "../../UI/Wrapper";
 import Button from "react-bootstrap/Button";
 import style from "./Success.module.css";
+import SuccessDetails from "./SuccessDeatils";
 
 const Success = () => {
-  const [company, setCompany] = useState("");
-
-  const [balance, setBalance] = useState("");
-  const [employee, setEmployee] = useState("");
-  const [notes, setNotes] = useState("");
+  const [_id, setId] = useState([]);
+  const [company, setCompany] = useState([]);
+  const [balance, setBalance] = useState([]);
+  const [employee, setEmployee] = useState([]);
+  const [notes, setNotes] = useState([]);
   const [date, setDate] = useState("");
-  const { companyId } = useParams();
+  const { companyId, employeeId } = useParams();
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/get-snapshot-id-test/${companyId}`)
+      .get(`http://localhost:5000/get-snapshot-id-test/${companyId}/${employeeId}`)
       .then((res) => {
         setCompany(res.data.data.company);
+        setEmployee(res.data.data.details.map((r) => r.employee))
         setBalance(res.data.data.details.map((r) => r.balance));
-        setEmployee(res.data.data.details.map((r) => r.employee));
         setNotes(res.data.data.details.map((r) => r.notes));
         setDate(res.data.data.details.map((r) => r.date));
+        setId(res.data.data.details.map((r) => r._id));
       })
       .catch((err) => {
         console.log(err);
       });
-  }, [setBalance, setEmployee, setNotes, companyId]);
+  }, [setId, setBalance, setEmployee, setNotes, companyId, employeeId]);
 
   return (
     <>
       <Wrapper>
-
-        <h2 className="text-success"><em>Successfully Updated Balance!</em></h2>
-         <hr />
-          <div className="border border-primary rounded mb-4">
-          <h5 className="mt-2"> Date of transaction: {date} </h5>
-          </div>
-         { balance === "0.00" && <h4 className="text-success">{employee} is paid in full.</h4> }
-         { balance !== "0.00" && <h4>{employee[0]} new balance: ${balance[0]}</h4>}
-
-         <div className="mb-4 pb-4 text-secondary">
-         { notes !== "" &&<h5>Notes: {notes[0]}</h5>}
-         { notes === "" &&<h5>Notes: No notes at this time</h5>}
+        <h2 className="text-success">
+          <em>Successfully Updated Balance!</em>
+        </h2>
+        <hr />
+        <div className="border border-primary rounded mb-4">
+          <h5 className="mt-2"> Date of transaction: {date}  </h5>
         </div>
-        <div className="mb-2">
-          <Button className={style["continue-btn"]} href="/search-comp-details">
-            Continue seraching {company}
-          </Button>
-        </div>
+        <SuccessDetails
+          employee={employee}
+          balance={balance}
+          notes={notes}
+          company={company}
+          employeeId={employeeId}
+          _id={_id}
+        />
         <div>
           <Button className={style["back-btn"]} href="/main">
             Back to Main
@@ -60,4 +59,3 @@ const Success = () => {
   );
 };
 export default Success;
-

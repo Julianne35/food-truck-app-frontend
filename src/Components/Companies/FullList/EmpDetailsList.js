@@ -8,9 +8,6 @@ import style from "../../Media/Mobile.module.css";
 
 const EmpDetailsList = ({ employee, balance, employeeId, companyId }) => {
   const bal = balance.map((res) => res);
-  // const [index, setIndex] = useState([]);
-
-  // const eid = employeeId.map((e) => e);
   return (
     <>
       <Container className="pl-1 pr-1 mt-4">
