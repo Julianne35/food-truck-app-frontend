@@ -9,6 +9,8 @@ import Options from "./Components/Options";
 import EmpContainer from "./Components/Employees/EmpContainer";
 import CompDetailsContainer from "./Components/Companies/SearchCompanies/CompDetailsContainer";
 import AddEmpBalance from "./Components/Employees/AddBalance/AddEmpBalance";
+import AddAccounts from "./Components/AddAccounts/AddAccounts";
+
 import Success from "./Components/Employees/AddBalance/Success";
 import List from "./Components/Companies/FullList/List";
 import ListResults from "./Components/Companies/FullList/ListResults";
@@ -38,6 +40,8 @@ function App() {
 
               <Route exact path="/mobile" component={Container} />
               <Route exact path="/res-search" component={Container} />
+
+              <Route exact path="/add-accounts" component={AddAccounts} />
 
               <Route path="/main" component={Main} />
               <Route exact path="/" component={Login} />

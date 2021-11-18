@@ -1,0 +1,89 @@
+.add-accounts-header {
+  font-size: 2.5rem;
+}
+
+.add-accounts-card {
+  margin-bottom: 1rem;
+  padding-top: 0.3rem;
+  background-color: teal;
+  color: whitesmoke;
+}
+
+.check-background {
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+
+.company-info-title {
+  text-align: left;
+  color: #1f4f83;
+}
+
+.add-employees-title {
+  color: #1f4f83;
+  text-align: left;
+}
+
+.plus-button {
+  width: 3.8rem;
+  font-size: 1rem;
+  margin-left: -1.5rem;
+  background-color: #1f4f83 !important;
+}
+
+.act-phone-col {
+  padding: 0 !important;
+}
+
+.form-check {
+  background-color: #1f4f83 !important;
+  color: whitesmoke;
+  border-radius: 0 0.2rem 0.2rem 0;
+  padding: 7px 32px;
+}
+
+.act-details-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex: calc(5 * 5);
+}
+
+.empNameRow {
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: justify;
+}
+
+.emp-name-col {
+  padding: 0;
+  margin-left: 1rem;
+  flex: calc(5 * 5);
+}
+
+@media screen and (min-width: 600px) {
+  .check-background {
+    margin-left: -52px !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .check-background {
+    margin-left: -38px !important;
+    border-radius: 0.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .check-background {
+    margin-left: -47px !important;
+  }
+  .form-check {
+    padding: 7px 47px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .form-check {
+    padding: 7px 55px;
+  }
+}
