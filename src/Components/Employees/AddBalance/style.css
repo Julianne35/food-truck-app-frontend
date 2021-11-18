@@ -57,6 +57,12 @@ input[type="checkbox"] {
   flex-flow: row-reverse;
 }
 
+@media (min-width: 576px) {
+  .col-sm-1 {
+    max-width: 66.333px;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   button#dropdown-basic-button,
@@ -64,11 +70,11 @@ input[type="checkbox"] {
     background-color: #1f4f83 !important;
   }
 
-  input[type="text"],
+  /* input[type="text"],
   input[type="password"] {
     margin-left: 0.9rem;
     width: 95%;
-  }
+  } */
 
   button.react-datepicker__close-icon {
     margin-right: 1.3rem;
@@ -93,8 +99,8 @@ input[type="checkbox"] {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   input[type="text"] {
     width: 96.8%;
   }
-}
+} */

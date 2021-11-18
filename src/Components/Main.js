@@ -14,7 +14,7 @@ const Main = () => {
           <Button href="/res-search" className={style["main-btn"]}>View Customer Credit History</Button> }
           <Button href="/options-comp" className={style["main-btn"]}>Search Customers</Button>
           <Button href="/options-emp"className={style["main-btn"]}>Search Employees</Button>
-          <Button className={style["main-btn"]}>Add Accounts</Button>
+          <Button href="/add-accounts" className={style["main-btn"]}>Add Accounts</Button>
         </div>
       </Wrapper>
     </>

@@ -4,7 +4,7 @@ import Wrapper from "../../UI/Wrapper";
 import Card from "react-bootstrap/Card";
 import style from "../Snapshots/CompStyle.module.css";
 
-const CompDeatilsContainer = (props) => {
+const CompDeatilsContainer = () => {
   return (
     <>
       <div className={style["cont-width"]}>
