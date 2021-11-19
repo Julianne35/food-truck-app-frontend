@@ -23,11 +23,15 @@
   text-align: left;
 }
 
-.plus-button {
-  width: 3.8rem;
-  font-size: 1rem;
-  margin-left: -1.5rem;
-  background-color: #1f4f83 !important;
+.plus-button,
+.remove-button
+{
+  width: 100%;
+  padding: 6px 8px; 
+  background-color: #185494 !important;
+}
+.remove-button {
+  background-color: #a80f17 !important;
 }
 
 .act-phone-col {
@@ -50,20 +54,42 @@
 
 .empNameRow {
   display: flex;
-  flex-wrap: nowrap;
-  text-align: justify;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .emp-name-col {
-  padding: 0;
-  margin-left: 1rem;
-  flex: calc(5 * 5);
+  flex-grow: 1.6;
+}
+
+
+@media screen and (min-width: 320px) {
+  .empNameRow {
+    display: flex;
+    flex-direction: row;
+  }
+  .emp-name-col, 
+  .input-col {
+    margin: 0 1rem;
+    padding:0;
+  }
 }
 
 @media screen and (min-width: 600px) {
   .check-background {
     margin-left: -52px !important;
   }
+  .empNameRow {
+    flex-wrap: nowrap;
+    margin: 0 1rem;
+  }
+  .plus-button,
+  .remove-button {
+    width: 5rem;
+  }
+  .emp-name-col {
+    padding: 0;
+    margin: 0 -24px 0 -6px }
 }
 
 @media screen and (min-width: 768px) {
@@ -71,7 +97,19 @@
     margin-left: -38px !important;
     border-radius: 0.2rem;
   }
+  .emp-name-col {
+    margin: 0 -13px 0 1px }
 }
+
+/* @media screen and (min-width: 800px) {
+  .check-background {
+    margin-left: -38px !important;
+    border-radius: 0.2rem;
+  }
+  .emp-name-col {
+    flex: calc(100vw - ((36vw -100%))) 1 ;
+  }
+} */
 
 @media screen and (min-width: 1024px) {
   .check-background {
@@ -80,10 +118,38 @@
   .form-check {
     padding: 7px 47px;
   }
+  /* .emp-name-col {
+    flex: calc(100vw - ((36vw -100%))) 1 ;
+  } */
+  .remove-button,
+  .plus-button {
+    /* width: 7rem; */
+  }
 }
+
+/* @media screen and (min-width: 1134px) {
+  .emp-name-col {
+    flex: calc(100vw - ((42vw -100%))) 1 ;
+  }
+} */
 
 @media screen and (min-width: 1280px) {
   .form-check {
     padding: 7px 55px;
   }
+  /* .emp-name-col {
+    flex: calc(100vw - ((35vw -100%))) 1 ;
+  } */
 }
+
+/* @media screen and (min-width: 1366px) {
+  .emp-name-col {
+    flex: calc(100vw - ((39vw -100%))) 1 ;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .emp-name-col {
+    flex: calc(100vw - ((57vw -100%))) 1 ;
+  }
+} */
