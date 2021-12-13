@@ -11,7 +11,7 @@ const AddAccounts = () => {
         <Card className={style["add-accounts-card"]}>
           <h2 className={style["add-accounts-header"]}>Add Accounts</h2>
         </Card>
-        <AddAccountsDetails />
+        <AddAccountsDetails/>
       </Wrapper>
     </>
   );

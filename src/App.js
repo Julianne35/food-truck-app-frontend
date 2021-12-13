@@ -16,40 +16,64 @@ import List from "./Components/Companies/FullList/List";
 import ListResults from "./Components/Companies/FullList/ListResults";
 import Cont from "./Components/TestThree/Cont";
 
-import {CompLiProvider} from "./Components/TestThree/CompLiContext";
+import { CompLiProvider } from "./Components/TestThree/CompLiContext";
 
 function App() {
   return (
-    <CompLiProvider>
-      <CompInfoProvider>
-        <CompListProvider>
-          <Router>
-            <Switch>
-              <Route exact path="/test" component={Cont} />
+      <CompLiProvider>
+        <CompInfoProvider>
+          <CompListProvider>
+            <Router>
+              <Switch>
+                <Route exact path="/test" component={Cont} />
 
-              <Route exact path="/resultslist/:companyId" component={ListResults} />
-              <Route exact path="/list" component={List} />
-              <Route exact path="/success/:companyId/:employeeId" component={Success} />
-              <Route exact path="/addbalance/:employee/:balance/:companyId/:employeeId" component={AddEmpBalance} />
-              <Route exact path="/search-comp-details" component={CompDetailsContainer} />
-              <Route exact path="/search-by-emp-name" component={EmpContainer} />
-              <Route exact path="/emp-search-by-comp-name" component={EmpContainer} /> 
+                <Route
+                  exact
+                  path="/resultslist/:companyId"
+                  component={ListResults}
+                />
+                <Route exact path="/list" component={List} />
+                <Route
+                  exact
+                  path="/success/:companyId/:employeeId"
+                  component={Success}
+                />
+                <Route
+                  exact
+                  path="/addbalance/:employee/:balance/:companyId/:employeeId"
+                  component={AddEmpBalance}
+                />
+                <Route
+                  exact
+                  path="/search-comp-details"
+                  component={CompDetailsContainer}
+                />
+                <Route
+                  exact
+                  path="/search-by-emp-name"
+                  component={EmpContainer}
+                />
+                <Route
+                  exact
+                  path="/emp-search-by-comp-name"
+                  component={EmpContainer}
+                />
 
-              <Route exact path="/options-comp" component={Options} />
-              <Route exact path="/options-emp" component={Options} />
+                <Route exact path="/options-comp" component={Options} />
+                <Route exact path="/options-emp" component={Options} />
 
-              <Route exact path="/mobile" component={Container} />
-              <Route exact path="/res-search" component={Container} />
+                <Route exact path="/mobile" component={Container} />
+                <Route exact path="/res-search" component={Container} />
 
-              <Route exact path="/add-accounts" component={AddAccounts} />
+                <Route exact path="/add-accounts" component={AddAccounts} />
 
-              <Route path="/main" component={Main} />
-              <Route exact path="/" component={Login} />
-            </Switch>
-          </Router>
-        </CompListProvider>
-      </CompInfoProvider>
-     </CompLiProvider>
+                <Route path="/main" component={Main} />
+                <Route exact path="/" component={Login} />
+              </Switch>
+            </Router>
+          </CompListProvider>
+        </CompInfoProvider>
+      </CompLiProvider>
   );
 }
 

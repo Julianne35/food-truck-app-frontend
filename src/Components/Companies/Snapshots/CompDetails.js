@@ -3,11 +3,10 @@ import Button from "react-bootstrap/Button";
 import CompCol from "./CompCol";
 import style from "./CompStyle.module.css";
 
-const CompDetails = ({ filtered }) => {
+const CompDetails = ({ filtered, index }) => {
   const fltr = filtered.map((result) =>
     result.details.map((inner) => (
       <Results
-        key={inner.id}
         employee={inner.employee}
         date={inner.date}
         tax={inner.tax}
