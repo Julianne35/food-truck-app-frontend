@@ -2,11 +2,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import style from "./CompStyle.module.css";
 
-const Results = ({ details, employee, date, tax, balance }) => {
+const Results = ({ employee, date, tax, balance }) => {
   return (
     <>
     <div className="d-flex justify-content-center">
-        <Row className={style["row-style"]}>
+        <Row key={employee} className={style["row-style"]}>
           <Col
             style={{ width: "26rem" }}
             className={style["snap-col-style-1"]}
